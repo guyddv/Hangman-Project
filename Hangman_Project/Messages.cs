@@ -20,12 +20,12 @@ Good luck!");
 
         public static void PlayerGuess()
         {
-            Console.WriteLine("Pick a letter, any letter: ");
+            Console.WriteLine("\nPick a letter, any letter: ");
         }
 
         public static void GuessAgain()
         {
-            Console.WriteLine("Letter not found, guess again: ");
+            Console.WriteLine("Guess another letter: ");
         }
 
         public static void DisplayCurrentGameState(List<char> Progress, List<char> BadGuesses, int GuessesRemaining)

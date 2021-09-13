@@ -12,44 +12,42 @@ namespace Hangman_Project
         
         
 
-        char badGuess = ' ';
+        public int badGuess = 5;
 
         
 
         public static void GetPlayerGuess()
         {
-            var NewWord = new WordGenerator();
-            string newWord = NewWord.GetWord();
-        
             char playerGuess = Convert.ToChar(Console.ReadLine());        
             List<char> badGuessList = new List<char>();
             int guessesRemaining = 5;
-            string maskedWord = newWord.Replace(newWord, "_");
+            //string displayedWord = new WordMask.DisplayedWord();
+            //string maskedWord = DisplayedWord();
 
-            foreach (char character in newWord)
-            {
-                if (playerGuess == newWord[character])
-                {
+            //foreach (char character in newWord)
+            //{
+            //    if (playerGuess == newWord[character])
+            //    {
                     
-                }
-                else 
-                {
-                    guessesRemaining--;
-                    if (guessesRemaining == 0)
-                    {
-                        badGuessList.Add(playerGuess);
-                        Messages.DisplayCurrentGameState( , badGuessList, guessesRemaining);
+            //    }
+            //    else 
+            //    {
+            //        guessesRemaining--;
+            //        if (guessesRemaining == 0)
+            //        {
+            //            badGuessList.Add(playerGuess);
+            //            Messages.DisplayCurrentGameState( , badGuessList, guessesRemaining);
 
-                    }
-                    else
-                    {
-                        badGuessList.Add(playerGuess);
-                        Messages.DisplayCurrentGameState( , badGuessList, guessesRemaining);
-                        Messages.GuessAgain();
-                    }
+            //        }
+            //        else
+            //        {
+            //            badGuessList.Add(playerGuess);
+            //            Messages.DisplayCurrentGameState( , badGuessList, guessesRemaining);
+            //            Messages.GuessAgain();
+            //        }
                     
-                }
-            }
+            //    }
+            //}
         }
     }
 }

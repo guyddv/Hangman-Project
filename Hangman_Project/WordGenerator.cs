@@ -15,6 +15,11 @@ namespace Hangman_Project
             "Encapsulate",
             "Constructor",
             "Inheritance",
+            "Algorithm",
+            "Overload",
+            "Argument",
+            "Concantenation",
+            "Variable",
         };
 
         public string GetWord()
