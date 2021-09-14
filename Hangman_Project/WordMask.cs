@@ -9,8 +9,6 @@ namespace Hangman_Project
     public class WordMask
     {
         public static string displayWord = "";
-        public string BadGuesses = "";
-        public int guessesRemaining = 5;
 
         public static string DisplayedWord()
         {

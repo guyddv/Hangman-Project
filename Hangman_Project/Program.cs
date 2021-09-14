@@ -14,16 +14,6 @@ namespace Hangman_Project
             
             Messages.DisplayCurrentGameState(WordMask.displayWord, badGuessList, 5);
             PlayerResponse.GetPlayerGuess();
-            //while (guessesRemaining != 0)
-            //{
-                
-            //}
-            //PlayerResponse.GetPlayerGuess();
-            
-
-
-
-
         }
     }
 }
