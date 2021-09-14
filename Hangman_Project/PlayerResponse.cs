@@ -18,36 +18,39 @@ namespace Hangman_Project
 
         public static void GetPlayerGuess()
         {
-            char playerGuess = Convert.ToChar(Console.ReadLine());        
-            List<char> badGuessList = new List<char>();
+            char playerGuess = Convert.ToChar(Console.ReadLine());
+            string badGuessList = "";
             int guessesRemaining = 5;
-            //string displayedWord = new WordMask.DisplayedWord();
-            //string maskedWord = DisplayedWord();
 
-            //foreach (char character in newWord)
-            //{
-            //    if (playerGuess == newWord[character])
-            //    {
-                    
-            //    }
-            //    else 
-            //    {
-            //        guessesRemaining--;
-            //        if (guessesRemaining == 0)
-            //        {
-            //            badGuessList.Add(playerGuess);
-            //            Messages.DisplayCurrentGameState( , badGuessList, guessesRemaining);
+            foreach (char character in newWord)
+            {
+                if (playerGuess == newWord[character])
+                {
+                    displayWord[character] = playerGuess;
+                    if (displayWord == newWord)
+                    {
+                        Messages.GameWon();
+                    }
+                }
+                else
+                {
+                    guessesRemaining--;
+                    if (guessesRemaining == 0)
+                    {
+                        badGuessList += playerGuess;
+                        Messages.DisplayCurrentGameState(displayWord, badGuessList, guessesRemaining);
+                        Messages.GameLost();
 
-            //        }
-            //        else
-            //        {
-            //            badGuessList.Add(playerGuess);
-            //            Messages.DisplayCurrentGameState( , badGuessList, guessesRemaining);
-            //            Messages.GuessAgain();
-            //        }
-                    
-            //    }
-            //}
+                    }
+                    else
+                    {
+                        badGuessList += playerGuess;
+                        Messages.DisplayCurrentGameState(newWord, badGuessList, guessesRemaining);
+                        Messages.GuessAgain();
+                    }
+
+                }
+            }
         }
     }
 }

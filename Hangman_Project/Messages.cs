@@ -8,6 +8,7 @@ namespace Hangman_Project
 {
     public class Messages
     {
+
         public static void WelcomeMessage()
         {
             Console.WriteLine(@"Welcome to Hangman.  The rules are simple: 
@@ -25,13 +26,23 @@ Good luck!");
 
         public static void GuessAgain()
         {
-            Console.WriteLine("Guess another letter: ");
+            Console.WriteLine("\nGuess another letter: ");
         }
 
-        public static void DisplayCurrentGameState(List<char> Progress, List<char> BadGuesses, int GuessesRemaining)
+        public static void DisplayCurrentGameState(string Progress, string BadGuesses, int GuessesRemaining)
         {
-            Console.WriteLine($"Mystery Word: {Progress}    Wrong Guesses: {BadGuesses}");
+            Console.WriteLine($"\nMystery Word: {Progress}    Wrong Guesses: {BadGuesses}");
             Console.WriteLine($"Guesses Remaining: {GuessesRemaining}.");
         }
-    }       //  'Instantiate'   '_n____n_____'
+
+        public static void GameLost()
+        {
+            Console.WriteLine("\nNo more guesses, you lose!");
+        }
+
+        public static void GameWon()
+        {
+            Console.WriteLine("\nYou guessed the mystery word!");
+        }
+    }       
 }

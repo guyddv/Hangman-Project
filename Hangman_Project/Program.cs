@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Hangman_Project
 {
@@ -6,25 +7,19 @@ namespace Hangman_Project
     {
         static void Main(string[] args)
         {
+            string badGuessList = "";
             Messages.WelcomeMessage();
             Messages.PlayerGuess();
-            WordMask.DisplayedWord();
-            //Messages.DisplayCurrentGameState(displayedWord, ' ', 5);
-            //var NewWord = new WordGenerator();
-            //string newWord = NewWord.GetWord();
-            //var MaskedWord = new WordMask(newWord);
-            //var NewWord = WordMask.DisplayedWord();
-            //var NewWord = new WordGenerator();
-            //string newWord = NewWord.GetWord();
-            //Messages.DisplayCurrentGameState(NewWord,'0', 5);
-            //Messages.PlayerGuess();
-
-            //while (badGuesses != 0)
-            //{
-
-            //}
+            Console.WriteLine(WordMask.DisplayedWord());
             
-            //Messages.PlayerGuess();
+            Messages.DisplayCurrentGameState(WordMask.displayWord, badGuessList, 5);
+            PlayerResponse.GetPlayerGuess();
+            //while (guessesRemaining != 0)
+            //{
+                
+            //}
+            //PlayerResponse.GetPlayerGuess();
+            
 
 
 
