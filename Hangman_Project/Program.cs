@@ -7,12 +7,9 @@ namespace Hangman_Project
     {
         static void Main(string[] args)
         {
-            string badGuessList = "";
             Messages.WelcomeMessage();
             Messages.PlayerGuess();
-            Console.WriteLine(WordMask.DisplayedWord());
-            
-            Messages.DisplayCurrentGameState(WordMask.displayWord, badGuessList, 5);
+            //Messages.DisplayCurrentGameState(WordMask.displayWord, badGuessList, 5);
             PlayerResponse.GetPlayerGuess();
         }
     }

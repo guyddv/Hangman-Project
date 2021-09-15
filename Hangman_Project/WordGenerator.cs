@@ -10,16 +10,16 @@ namespace Hangman_Project
     {
         public List<string> Words = new List<string>()
         {
-            "Instantiate",
-            "Polymorphism",
-            "Encapsulate",
-            "Constructor",
-            "Inheritance",
-            "Algorithm",
-            "Overload",
-            "Argument",
-            "Concantenation",
-            "Variable",
+            "instantiate",
+            "polymorphism",
+            "encapsulate",
+            "constructor",
+            "inheritance",
+            "algorithm",
+            "overload",
+            "argument",
+            "concantenation",
+            "variable",
         };
 
         public string GetWord()
@@ -30,3 +30,5 @@ namespace Hangman_Project
         }
     }
 }
+
+

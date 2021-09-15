@@ -8,18 +8,18 @@ namespace Hangman_Project
 {
     public class WordMask
     {
-        public static string displayWord = "";
+        public static string displayWord { get; set; }
 
-        public static string DisplayedWord()
+        public string DisplayedWord(string MyWord)
         {
-            var NewWord = new WordGenerator();
-            string newWord = NewWord.GetWord();
-
-            for (int i = 0; i < newWord.Length; i++)
+            for (int i = 0; i < MyWord.Length; i++)
             {
                 displayWord += "*";
             }
+
             return displayWord;
         }
     }
 }
+
+
